@@ -13,12 +13,19 @@ $(document).ready(function () {
 
   function search() {
     let term = $('#keyword').val().trim()
-    $.ajax({
-      'url': `http://localhost:8080/?keyword=${term}`, 'type': 'GET',
-      'success': successFunction, 'error': failureFunction
-    }).always(function () {
-      $('#loader').hide()
-    })
+    $.get('http://localhost:8080', { data: { keyword: term } })
+      .done(successFunction)
+      .fail(failureFunction)
+      // .always(function () {
+      //   $('#loader').hide()
+      // })
+
+    // $.ajax({
+    //   'url': `http://localhost:8080/?keyword=${term}`, 'type': 'GET',
+    //   'success': successFunction, 'error': failureFunction
+    // }).always(function () {
+    //   $('#loader').hide()
+    // })
 
     function successFunction(data) {
       $('.search-result').empty()

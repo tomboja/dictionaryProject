@@ -1,3 +1,4 @@
+//filename: word.js
 /**
  * Online dictionary project
  * author: Temesgen Dessalegn

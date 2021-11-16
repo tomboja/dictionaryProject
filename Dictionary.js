@@ -1,3 +1,4 @@
+//filename: Dictionary.js
 /**
  * Online dictionary project
  * author: Temesgen Dessalegn

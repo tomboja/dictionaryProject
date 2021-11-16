@@ -69,7 +69,7 @@ h3 {
   font-size: 14px;
 }
 
-.loader {
+#loader {
   text-align: center;
   padding: 10px;
   font-style: italic;

@@ -19,17 +19,31 @@ const con = mysql.createConnection({
   database: DATABASE
 })
 
+/**
+ * Make connection to db, and throws error if connection fails
+ */
 con.connect((error) => {
   if (error) { throw error }
   console.info('Connected!')
 })
 
+/**
+ * Word definition model
+ * @param {object} entry - object containing the definitions of the term as returned form db
+ * @function
+ */
 const WordDefinition = function (entry) {
   this.word = entry.word
   this.wordtype = entry.wordtype
   this.definition = entry.definition
 }
 
+/**
+ * Function to make a request to database with Select sql statement
+ * @param {string} word - the search term
+ * @param {function} result - callback function that excutes to send result back
+ * @function 
+ */
 WordDefinition.findByWord = (word, result) => {
   con.query(`SELECT * FROM entries WHERE word = '${word}'`, (err, res) => {
     if (err) {

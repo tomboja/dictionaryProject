@@ -4,18 +4,24 @@
  * author: Temesgen Dessalegn
  * year: 2021
  */
+
+/**constant */ const LOCALHOST = 'localhost'
+/**constant */ const ROOT = 'root'
+/**constant */ const PASSWORD = 'password'
+/**constant */ const DATABASE = 'entries'
+
 const mysql = require('mysql')
 
 const con = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'password',
-  database: 'entries'
+  host: LOCALHOST,
+  user: ROOT,
+  password: PASSWORD,
+  database: DATABASE
 })
 
 con.connect((error) => {
   if (error) { throw error }
-  console.log('Connected!')
+  console.info('Connected!')
 })
 
 const WordDefinition = function (entry) {

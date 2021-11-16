@@ -16,12 +16,12 @@ app.use(cors({ origin: '*' }))
 app.use(express.urlencoded({ extended: false }))
 
 const lookupWordFromDictionary = (req, res) => {
-  Word.findByWord(req.query.data.keyword, (err, data) => {
+  Word.findByWord(req.query.data.term, (err, data) => {
     if (err) {
       if (err.kind === 'not_found') {
         res.send([])
       } else {
-        console.log(`Error retrieving definition with keyword ${req.params.keyword}`)
+        console.log(`Error retrieving definition with search term ${req.params.term}`)
         res.send([])
       }
     } else res.send(data)

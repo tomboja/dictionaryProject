@@ -13,12 +13,12 @@ $(document).ready(function () {
 
   function search() {
     let term = $('#keyword').val().trim()
-    $.get('http://localhost:8080', { data: { keyword: term } })
+    $.get('http://localhost:8080', { data: { term } })
       .done(successFunction)
       .fail(failureFunction)
-      // .always(function () {
-      //   $('#loader').hide()
-      // })
+      .always(function () {
+        $('#loader').hide()
+      })
 
     // $.ajax({
     //   'url': `http://localhost:8080/?keyword=${term}`, 'type': 'GET',

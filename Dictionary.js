@@ -21,7 +21,7 @@ const lookupWordFromDictionary = (req, res) => {
       if (err.kind === 'not_found') {
         res.send([])
       } else {
-        console.log(`Error retrieving definition with search term ${req.params.term}`)
+        console.log(`Error retrieving definition with search term ${req.query.data.term}`)
         res.send([])
       }
     } else res.send(data)

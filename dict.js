@@ -8,7 +8,6 @@ $(document).ready(function () {
   $(document).ajaxStart(function () { $('#loader').show() })
     .ajaxStop(function () { $('#loader').hide() })
   $('#btnsearch').on('click', search)
-  $('#keyword').on('input', search)
 
   function search() {
     let term = $('#keyword').val().trim()

@@ -14,7 +14,7 @@ const app = express()
 app.use(cors({ origin: '*' }))
 app.use(express.urlencoded({ extended: false }))
 
-lookupWordFromDictionary = (req, res) => {
+const lookupWordFromDictionary = (req, res) => {
   Word.findByWord(req.query.keyword, (err, data) => {
     if (err) {
       if (err.kind === 'not_found') {

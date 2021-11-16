@@ -1,0 +1,77 @@
+/**
+ * Online dictionary project
+ * author: Temesgen Dessalegn
+ * year: 2021
+ */
+.container {
+  margin: 10px auto;
+  width: 80%;
+  padding: 5px 50px;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  margin-bottom: 0px;
+}
+
+.dictionary {
+  color: black;
+  font-size: 46px;
+}
+
+h3 {
+  font-style: normal;
+}
+
+.search-box input {
+  border: 1px solid gray;
+  border-radius: 2px;
+  line-height: 32px;
+  padding: 4px 8px;
+  font-size: large;
+  vertical-align: middle;
+}
+
+.search-box button {
+  border: 0px;
+  border-radius: 2px;
+  line-height: 32px;
+  padding: 4px 8px;
+  font-weight: 600;
+  margin: 0px;
+  cursor: pointer;
+  color: black;
+  border: 1px solid gray;
+  width: 10%;
+}
+
+.search-result {
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 10px auto;
+}
+
+.search-result p {
+  padding: 5px 0px;
+}
+
+.defNumber {
+  font-weight: bold;
+  font-size: 16px;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  font-style: normal;
+}
+
+.type {
+  font-size: 14px;
+}
+
+.loader {
+  text-align: center;
+  padding: 10px;
+  font-style: italic;
+  font-size: medium;
+}
